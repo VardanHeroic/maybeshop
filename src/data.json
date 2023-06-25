@@ -1,0 +1,19 @@
+{
+	"elements": [
+		{
+			"id": 0,
+			"img": "0.jpg",
+			"name": "PS5",
+			"price": 300000,
+			"basketPrice": 300000
+		},
+		{
+			"id": 1,
+			"img": "1.jpg",
+			"name": "iPhone 14",
+			"price": 380000,
+			"basketPrice":380000
+		}
+	],
+	"basketElements": []
+}

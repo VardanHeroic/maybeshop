@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)export 'Link' (imported as 'Link') was not found in 'react-router' (p
 ## Available Scripts
 
 In the project directory, you can run:
