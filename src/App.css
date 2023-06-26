@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -13,7 +20,7 @@
 	display: flex;
 	align-items: center;
 }
-img{
+.basket img{
 	width: 100px;
 	height: 100px;
 }
@@ -22,9 +29,60 @@ img{
 	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
+	background: #181818;
+	padding: 0px;
+	margin: 0;
 }
 
 .menu li a {
 	text-decoration: none;
-	color: #161925;
+	color: #f8f8f8;
+}
+
+.catalog{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.catalog article{
+	height: 600px;
+	width: 300px;
+}
+
+.catalog article a {
+	font-weight: 700;
+	color: #000000;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.catalog article a:hover {
+	text-decoration: underline;
+}
+
+.catalog article img{
+	width: 300px;
+	height: 300px;
+}
+
+.productCard-btn{
+	background: #0069ff;
+	color: #ffffff;
+	border: none;
+	border-radius: 15px;
+	height: 40px;
+}
+
+.red{
+	background: #cc1505;
+}
+
+.basketCount{
+	position: relative;
+	bottom: 10px;
+	left: 5px;
+	color: #ffffff;
+	padding: 3px;
+	border-radius: 5px;
 }

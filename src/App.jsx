@@ -72,7 +72,7 @@ export default class App extends Component {
 		return (
 			<div className="App">
 				<Router>
-					<Header/>
+					<Header basketElements={this.state.basketElements} />
 					<main>
 						<Routes>
 							<Route index 

@@ -11,7 +11,7 @@ export default class Header extends Component {
 							<Link to="/" >Catalog</Link>
 						</li>
 						<li>
-							<Link to="/Basket">Basket</Link>
+							<Link to="/Basket">Basket{ this.props.basketElements.length == 0 ? '': <span className='basketCount red' >{this.props.basketElements.length}</span> }</Link>
 						</li>
 					</ul>
 				</nav>
