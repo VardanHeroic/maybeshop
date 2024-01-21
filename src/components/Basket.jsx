@@ -1,20 +1,22 @@
 import { Component } from 'react'
-import Element from './Basket-Element';
+import Cart_Element from './Basket-Element';
 
-export default class Basket extends Component {
+export default class Cart extends Component {
 	render() {
 		return(
-			<div className="basket">
+			<div className="cart">
 			{
-				this.props.basketElements.map( element => {
-					return	<Element {...element} 
-								removeElement={this.props.removeElement}   
-								changePrice={this.props.changePrice} 
-								key={element.id} >
-							</Element>
-				})
-			}
-				<div className="total">{ this.props.basketElements.length === 0 ? '' : this.props.total}</div>
+                Object.entries(this.props.cartItems).map((entry) => {
+                    let [id,cartItem] = entry
+                    if(cartItem > 0){
+                        return  <Cart_Element key={id} changePrice={this.props.changePrice} removeElement={this.props.removeElement} {...this.props.findById(this.props.data,Number(id))} cartItems={this.props.cartItems}  />
+                    }
+                })
+            }
+
+			{	this.props.cartItems.length === 0 ? 'Cart is empty' : '' }
+
+				<div className="total">{ Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? 'yeah' : this.props.total}</div>
 			</div>
 		)
 	}

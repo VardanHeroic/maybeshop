@@ -7,14 +7,14 @@ export default class Catalog extends Component {
 			<div className="catalog">
 			{
 				this.props.data.map(element => {
-					return <ProductCard {...element} 
-								key={element.id} 
-								data={this.props.data}		
-								basketElements={this.props.basketElements}
+					return <ProductCard {...element}
+								key={element.id}
+								data={this.props.data}
+								cartItems={this.props.cartItems}
 								calaculateTotal={this.props.calaculateTotal}
 								toggleBasket={this.props.toggleBasket}
 								findById={this.props.findById}
-							/> 
+							/>
 				})
 			}
 			</div>

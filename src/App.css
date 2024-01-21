@@ -20,12 +20,13 @@ body{
 	display: flex;
 	align-items: center;
 }
-.basket img{
+.cart img{
 	width: 100px;
 	height: 100px;
 }
 
 .menu{
+	height: 30px;
 	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
@@ -37,6 +38,7 @@ body{
 .menu li a {
 	text-decoration: none;
 	color: #f8f8f8;
+	line-height: 2em;
 }
 
 .catalog{
@@ -85,4 +87,5 @@ body{
 	color: #ffffff;
 	padding: 3px;
 	border-radius: 5px;
+	font-size: 0.7em;
 }

@@ -5,25 +5,25 @@ export default class ProductCard extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {}
-		
+
 	}
-	
-		
-	
+
+
+
 
 	render() {
 		return (
 			<article>
 				<img src={require('../../public/img/'+this.props.img)} alt=""/> <br/>
 				<Link to={'/ProductPage/'+this.props.id} >{this.props.name}</Link><br/>
-				<span>{this.props.price+'֏'}</span><br/><br/>
-				<button 
+				<span>{this.props.price.toFixed(2)+'$'}</span><br/><br/>
+				<button
 					type="submit"
 					onClick={ e => this.props.toggleBasket(this.props.id) }
-					className={Object.values(this.props.basketElements).includes(this.props.findById(this.props.data,this.props.id)) ? 'red productCard-btn' : 'productCard-btn' }
+					className={this.props.cartItems[this.props.id] > 0 ? 'red productCard-btn' : 'productCard-btn' }
 				>
-			{Object.values(this.props.basketElements).includes(this.props.findById(this.props.data,this.props.id)) ? 'Remove from Basket' : 'Add to Basket' }
-					
+			{this.props.cartItems[this.props.id] > 0 ? 'Remove from Basket' : 'Add to Basket' }
+
 				</button>
 			</article>
 		)
