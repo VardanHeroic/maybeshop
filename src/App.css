@@ -41,29 +41,29 @@ body{
 	line-height: 2em;
 }
 
-.catalog{
+.products{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.catalog article{
+.products article{
 	height: 600px;
 	width: 300px;
 }
 
-.catalog article a {
+.products article a {
 	font-weight: 700;
 	color: #000000;
 	text-decoration: none;
 	font-size: 1em;
 }
 
-.catalog article a:hover {
+.products article a:hover {
 	text-decoration: underline;
 }
 
-.catalog article img{
+.products article img{
 	width: 300px;
 	height: 300px;
 }
@@ -88,4 +88,8 @@ body{
 	padding: 3px;
 	border-radius: 5px;
 	font-size: 0.7em;
+}
+
+.filter{
+    float: left;
 }

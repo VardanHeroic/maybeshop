@@ -6,8 +6,8 @@ export default class Cart_Element extends Component {
 		return(
 			<div className="element">
 				<div className="info">
-					<img src={require('../../public/img/'+this.props.img)} alt=""/>
-					<span>{this.props.name}</span>
+					<img src={this.props.thumbnail} alt=""/>
+					<span>{this.props.title}</span>
 					<input type="number" name="" id="" min={1} defaultValue={1} onChange={e => this.props.changePrice(this.props.id,e.target.value) } />
 				</div>
 				<div className="price">

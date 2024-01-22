@@ -16,7 +16,8 @@ export default class Cart extends Component {
 
 			{	this.props.cartItems.length === 0 ? 'Cart is empty' : '' }
 
-				<div className="total">{ Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? 'yeah' : this.props.total}</div>
+				<div className="total">{ Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? '' : this.props.total}</div>
+                <button>PURCHASE</button>
 			</div>
 		)
 	}

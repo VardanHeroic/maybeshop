@@ -14,8 +14,8 @@ export default class ProductCard extends Component {
 	render() {
 		return (
 			<article>
-				<img src={require('../../public/img/'+this.props.img)} alt=""/> <br/>
-				<Link to={'/ProductPage/'+this.props.id} >{this.props.name}</Link><br/>
+				<img src={this.props.thumbnail} alt=""/> <br/>
+				<Link to={'/ProductPage/'+this.props.id} >{this.props.title}</Link><br/>
 				<span>{this.props.price.toFixed(2)+'$'}</span><br/><br/>
 				<button
 					type="submit"
