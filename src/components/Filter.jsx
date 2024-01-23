@@ -1,4 +1,5 @@
 import React from 'react'
+import DualRangeSlider from './DualRangeSlider'
 
 export default function Filter(props) {
     let { data } = props
@@ -16,7 +17,7 @@ export default function Filter(props) {
     console.log(minPrice,maxPrice);
     return (
         <div className='filter'>
-            <input type="range" min={minPrice} max={maxPrice} onChange={e => console.log(e.target.value)}/>
+            <DualRangeSlider min={minPrice} max={maxPrice}></DualRangeSlider>
         </div>
     )
 }

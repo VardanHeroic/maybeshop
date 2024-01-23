@@ -1,17 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import './App.css';
+import './css/App.css';
 import Cart from './components/Basket';
 import Catalog from './components/Catalog';
 import Header from './components/Header';
-import dataFromJSON from './data.json';
 import { Component } from 'react';
 import ProductPage from './components/ProductPage';
-
-function getDefaultCartItems() {
-    let defaultCartItems = {}
-    dataFromJSON.elements.forEach(product => { defaultCartItems[product.id] = 0 })
-    return defaultCartItems
-}
 
 export default class App extends Component {
     constructor(props) {
@@ -19,7 +12,7 @@ export default class App extends Component {
         this.state = {
             isLoading: true,
             data: [],
-            cartItems: getDefaultCartItems(),
+            cartItems: [],
             total: 0
         }
         this.removeElement = this.removeElement.bind(this)
@@ -33,9 +26,13 @@ export default class App extends Component {
 
 
     componentDidMount() {
+        let defaultCartItems = {}
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
-            .then(json => this.setState({data: json.products,isLoading:false}));
+            .then(json => {
+                json.products.forEach(product => { defaultCartItems[product.id] = 0 })
+                this.setState({ data: json.products, isLoading: false, cartItems: defaultCartItems })
+            });
     }
 
     async setStateSynchronous(stateUpdate) {
@@ -92,7 +89,7 @@ export default class App extends Component {
     }
 
     render() {
-        if(this.state.isLoading){
+        if (this.state.isLoading) {
             return 'Loading...'
         }
         return (
