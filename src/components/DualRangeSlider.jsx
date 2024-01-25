@@ -1,21 +1,17 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 // import PropTypes from "prop-types";
 import "../css/DualRangeSlider.css";
 
-const DualRangeSlider = ({ min, max }) => {
-    const [minVal, setMinVal] = useState(min);
-    const [maxVal, setMaxVal] = useState(max);
+const DualRangeSlider = ({ min, max,minVal,maxVal ,setMinVal,setMaxVal }) => {
     const minValRef = useRef(min);
     const maxValRef = useRef(max);
     const range = useRef(null);
 
-    // Convert to percentage
     const getPercent = useCallback(
         (value) => Math.round(((value - min) / (max - min)) * 100),
         [min, max]
     );
 
-    // Set width of the range to decrease from the left side
     useEffect(() => {
         const minPercent = getPercent(minVal);
         const maxPercent = getPercent(maxValRef.current);
@@ -26,7 +22,6 @@ const DualRangeSlider = ({ min, max }) => {
         }
     }, [minVal, getPercent]);
 
-    // Set width of the range to decrease from the right side
     useEffect(() => {
         const minPercent = getPercent(minValRef.current);
         const maxPercent = getPercent(maxVal);
@@ -36,10 +31,9 @@ const DualRangeSlider = ({ min, max }) => {
         }
     }, [maxVal, getPercent]);
 
-    // Get min and max values when their state changes
 
     return (
-        <div className="container">
+        <div className="dual-range-slider">
             <input
                 type="range"
                 min={min}
@@ -69,17 +63,11 @@ const DualRangeSlider = ({ min, max }) => {
             <div className="slider">
                 <div className="slider__track" />
                 <div ref={range} className="slider__range" />
-                <div className="slider__left-value">{minVal}</div>
-                <div className="slider__right-value">{maxVal}</div>
+                <div className="slider__left-value">{minVal+'$'}</div>
+                <div className="slider__right-value">{maxVal+'$'}</div>
             </div>
         </div>
     );
 };
-
-// MultiRangeSlider.propTypes = {
-//     min: PropTypes.number.isRequired,
-//     max: PropTypes.number.isRequired,
-//     onChange: PropTypes.func.isRequired
-// };
 
 export default DualRangeSlider;

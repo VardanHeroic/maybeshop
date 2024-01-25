@@ -41,9 +41,9 @@ export default class App extends Component {
         });
     }
 
-    findById(arr, id) {
+    findById(id) {
         let obj = {}
-        arr.forEach(element => {
+        this.state.data.forEach(element => {
             if (element.id === id) {
                 obj = element
             }
@@ -103,15 +103,12 @@ export default class App extends Component {
                                 element=<Catalog
                                     data={this.state.data}
                                     cartItems={this.state.cartItems}
-                                    calaculateTotal={this.calaculateTotal}
-                                    findById={this.findById}
                                     toggleBasket={this.toggleBasket}
                                 />
                             />
                             <Route
                                 path='/Cart'
                                 element=<Cart
-                                    data={this.state.data}
                                     cartItems={this.state.cartItems}
                                     removeElement={this.removeElement}
                                     changePrice={this.changePrice}

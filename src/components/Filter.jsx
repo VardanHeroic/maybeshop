@@ -1,23 +1,12 @@
-import React from 'react'
 import DualRangeSlider from './DualRangeSlider'
+import CategoryCheckBox from './CategoryCheckBox'
 
-export default function Filter(props) {
-    let { data } = props
-    let minPrice = data[0].price
-    let maxPrice = data[0].price
+export default function Filter({ minPrice, maxPrice,filteredMinPrice,filteredMaxPrice,filteredCategories,setFilteredMinPrice,setFilteredMaxPrice,setFilteredCategories }) {
 
-    data.forEach(product => {
-        if (product.price < minPrice) {
-            minPrice = product.price
-        }
-        if (product.price > maxPrice) {
-            maxPrice = product.price
-        }
-    })
-    console.log(minPrice,maxPrice);
     return (
         <div className='filter'>
-            <DualRangeSlider min={minPrice} max={maxPrice}></DualRangeSlider>
+            <DualRangeSlider min={minPrice} max={maxPrice} minVal={filteredMinPrice} maxVal={filteredMaxPrice} setMinVal={setFilteredMinPrice} setMaxVal={setFilteredMaxPrice}  ></DualRangeSlider>
+            <CategoryCheckBox filteredCategories={filteredCategories} setFilteredCategories={setFilteredCategories}></CategoryCheckBox>
         </div>
     )
 }

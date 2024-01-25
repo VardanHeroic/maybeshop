@@ -91,5 +91,20 @@ body{
 }
 
 .filter{
-    float: left;
+    width: 15%;
+    border: 1px solid #000;
+    padding: 10px;
+    height: 100%;
+}
+
+.catalog{
+    display: flex;
+}
+
+.category-checkbox{
+    text-align: left;
+}
+
+.unclickable{
+    pointer-events: none
 }

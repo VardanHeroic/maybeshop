@@ -11,7 +11,7 @@ export default class Header extends Component {
 							<Link to="/" >Catalog</Link>
 						</li>
 						<li>
-							<Link to="/Cart">Cart{ Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? '': <span className='basketCount red' >{Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length}</span> }</Link>
+							<Link className={Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? 'unclickable': '' }  to="/Cart">Cart{ Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length === 0 ? '': <span className='basketCount red' >{Object.values(this.props.cartItems).filter(cartItem =>cartItem > 0).length}</span> }</Link>
 						</li>
 					</ul>
 				</nav>
