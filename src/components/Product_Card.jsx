@@ -2,18 +2,22 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard({ title, id, cartItems, toggleBasket, price, thumbnail }) {
     return (
-        <article>
-            <img src={thumbnail} alt="" /> <br />
-            <Link to={'/ProductPage/' + id} >{title}</Link><br />
-            <span>{price.toFixed(2) + '$'}</span><br /><br />
-            <button
-                type="submit"
-                onClick={e => toggleBasket(id)}
-                className={cartItems[id] > 0 ? 'red productCard-btn' : 'productCard-btn'}
-            >
-                {cartItems[id] > 0 ? 'Remove from Basket' : 'Add to Basket'}
+        <article className='productCard'>
+            <div className="productCard-header">
+                <Link to={'/ProductPage/' + id} className="productCard-title" >{title}</Link><br />
+            </div>
+            <Link to={'/ProductPage/' + id} className="productCard-imagelink" ><img className="productCard-image" src={thumbnail} alt="" /></Link><br />
+            <div className="productCard-footer">
+                <span className='productCard-price'>{price.toFixed(2) + '$'}</span>
+                <button
+                    type="submit"
+                    onClick={e => toggleBasket(id)}
+                    className={cartItems[id] > 0 ? 'red productCard-btn' : 'productCard-btn'}
+                >
+                    {cartItems[id] > 0 ? 'Remove from Basket' : 'Add to Cart'}
 
-            </button>
+                </button>
+            </div>
         </article>
     )
 }

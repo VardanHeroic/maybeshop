@@ -1,6 +1,7 @@
 import { useRef,useState } from 'react'
 import ProductCard from './Product_Card'
 import Filter from './Filter'
+import '../css/Catalog.css'
 
 export default function Catalog(props) {
     const maxPrice = useRef(props.data[0].price)

@@ -1,0 +1,116 @@
+.catalog{
+    display: flex;
+}
+
+
+
+.products{
+    width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+}
+
+.productCard{
+    padding: 20px;
+    display: inline-block;
+	width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius:  20px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.productCard:hover{
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .5);
+}
+
+.productCard-header{
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.productCard-title {
+	font-weight: 500;
+	color: #000000;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+.productCard-title:hover {
+	text-decoration: underline;
+}
+
+.productCard-image{
+    border-radius: 10px;
+    display: block;
+	width: 300px;
+	height: 300px;
+}
+
+.productCard-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productCard-price{
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.productCard-btn{
+	background: #0069ff;
+	color: #ffffff;
+	border: none;
+	border-radius: 15px;
+	height: 40px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.red{
+	background: #cc1505;
+}
+
+
+
+
+.filter{
+    margin-top: 20px;
+    width: 15%;
+    padding: 30px;
+    height: 100%;
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+.filter h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.filter hr{
+    border: 2px  #f0f0f0 solid;
+    border-radius: 5px;
+}
+
+.filter h3{
+    font-weight: 500;
+}
+
+.filter-category{
+    text-align: left;
+}
+
+.filter-category-label{
+    margin-left: 5px;
+}

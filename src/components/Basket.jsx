@@ -1,5 +1,5 @@
-import { Component } from 'react'
-import Cart_Element from './Basket-Element';
+import Cart_Item from './Basket-Element';
+import '../css/Cart.css'
 
 export default function Cart({ cartItems, changePrice, removeElement, total, findById }) {
     return (
@@ -8,7 +8,7 @@ export default function Cart({ cartItems, changePrice, removeElement, total, fin
                 Object.entries(cartItems).map((entry) => {
                     let [id, cartItem] = entry
                     if (cartItem > 0) {
-                        return <Cart_Element key={id} changePrice={changePrice} removeElement={removeElement} {...findById(Number(id))} cartItems={cartItems} />
+                        return <Cart_Item key={id} changePrice={changePrice} removeElement={removeElement} {...findById(Number(id))} cartItems={cartItems} />
                     }
                 })
             }

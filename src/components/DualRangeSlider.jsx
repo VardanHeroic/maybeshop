@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef } from "react";
-// import PropTypes from "prop-types";
 import "../css/DualRangeSlider.css";
 
 const DualRangeSlider = ({ min, max,minVal,maxVal ,setMinVal,setMaxVal }) => {
