@@ -12,10 +12,9 @@ export default function ProductCard({ title, id, cartItems, toggleBasket, price,
                 <button
                     type="submit"
                     onClick={e => toggleBasket(id)}
-                    className={cartItems[id] > 0 ? 'red productCard-btn' : 'productCard-btn'}
+                    className='productCard-btn'
                 >
-                    {cartItems[id] > 0 ? 'Remove from Basket' : 'Add to Cart'}
-
+                    Add to Cart
                 </button>
             </div>
         </article>

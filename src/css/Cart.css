@@ -1,18 +1,124 @@
+.cart{
+    display: flex;
+    justify-content: space-between;
 
+}
+
+.cart-total{
+    height: fit-content;
+     border-radius:  20px;
+	margin: 20px;
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    flex-grow: 0;
+}
+
+.cart-total-label{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.cart-total-price{
+    font-weight: 600;
+}
+
+.purchase-btn{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    font-weight: 600;
+    color: white
+}
 
 .cart-item {
-	display: flex;
-	margin: 10px;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-radius:  20px;
+	margin: 20px;
     background: #fff;
+    padding: 15px;
+    width: 700px;
 }
 
-.cart-item-info {
-	display: flex;
-	align-items: center;
+.cart-item-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
 }
-.cart img{
-	width: 100px;
-	height: 100px;
+
+.cart-item-amount-btn{
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    padding: 0;
+}
+
+.cart-item-amount{
+
+}
+
+.cart-item-remove{
+
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    background: #ffffff00;
+    font-size: 1.2em;
+    padding: 0;
+    text-align: center;
+    border: none;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.cart-item-remove:hover{
+	background: #cc1505;
+    color: #fff;
+}
+
+.cart-item-amount-input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0 10px;
+    border-radius: 17px;
+    text-align: center;
+    width: 25px;
+    border: none;
+}
+
+.cart-item-amount-input::-webkit-inner-spin-button,
+.cart-item-amount-input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+}
+
+.cart-item-title,
+.cart-item-price{
+    display: inline-block;
+
+}
+
+.cart-item-title{
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.cart-item-price{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.cart-item-img{
+    border-radius: 10px;
+	width: 150px;
+	height: 150px;
+    float: left;
+    margin-right: 15px;
 }

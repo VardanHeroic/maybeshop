@@ -53,15 +53,10 @@ export default class App extends Component {
 
     async toggleBasket(id) {
         let newCartItems = { ...this.state.cartItems }
-        if (this.state.cartItems[id] > 0) {
-            this.removeElement(id)
-        }
-        else {
-            newCartItems[id] = 1
-            await this.setStateSynchronous({ cartItems: newCartItems })
-            console.log(this.state.cartItems);
-            this.calaculateTotal()
-        }
+        newCartItems[id]++
+        await this.setStateSynchronous({ cartItems: newCartItems })
+        console.log(this.state.cartItems);
+        this.calaculateTotal()
 
     }
 
@@ -82,8 +77,12 @@ export default class App extends Component {
 
 
     async changePrice(i, num) {
+        console.log(num);
+        if (num === '') {
+            return
+        }
         let newCartItems = { ...this.state.cartItems }
-        newCartItems[i] = num
+        newCartItems[i] = Number(num)
         await this.setStateSynchronous({ cartItems: newCartItems })
         this.calaculateTotal()
     }

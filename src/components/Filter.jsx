@@ -5,7 +5,7 @@ export default function Filter({ minPrice, maxPrice, filteredMinPrice, filteredM
 
     return (
         <div className='filter'>
-            <h2>Filter</h2>
+            <h2>Filters</h2>
             <div className="filter-price">
                 <h3>Price</h3>
                 <DualRangeSlider min={minPrice} max={maxPrice} minVal={filteredMinPrice} maxVal={filteredMaxPrice} setMinVal={setFilteredMinPrice} setMaxVal={setFilteredMaxPrice}  ></DualRangeSlider>
