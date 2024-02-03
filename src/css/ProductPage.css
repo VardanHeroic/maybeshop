@@ -1,0 +1,40 @@
+.product-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-page-right{
+     border-radius:  20px;
+    background: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    height: fit-content;
+
+}
+
+.product-page-button{
+	background: #0069ff;
+	color: #ffffff;
+	border: none;
+	border-radius: 15px;
+	height: 40px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-page-hr{
+    border: 2px  #f0f0f0 solid;
+    border-radius: 5px;
+}
+
+.product-page-right-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-page-price{
+    font-size: 2em;
+    font-weight: 600;
+}

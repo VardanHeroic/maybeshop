@@ -65,7 +65,7 @@
 }
 
 .productCard-btn{
-	background: #0069ff;
+	background: #181818;
 	color: #ffffff;
 	border: none;
 	border-radius: 15px;
@@ -110,7 +110,9 @@
 .filter-category{
     text-align: left;
 }
-
+.filter-category input[type=checkbox] {
+  accent-color: #181818;
+}
 .filter-category-label{
     margin-left: 5px;
 }

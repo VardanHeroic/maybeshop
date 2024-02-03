@@ -1,0 +1,48 @@
+.carousel {
+  position: relative;
+  border-radius: 20px;
+  height: 400px;
+}
+
+.slide-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+img {
+    object-fit: fill;
+    height: 400px;
+    width: 700px;
+  border-radius: 20px;
+
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.0);
+  color: #acacac;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 1s;
+
+}
+
+.arrow:first-child {
+  left: 0;
+}
+
+.arrow:last-child {
+  right: 0;
+}

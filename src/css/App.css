@@ -3,43 +3,7 @@
 body{
 	margin: 0;
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+ position: relative;
+    min-height: calc(100vh + 20px);
     background: #f0f0f0;
-}
-
-
-
-
-.menu{
-	height: 30px;
-	display: flex;
-	list-style-type: none;
-	justify-content: space-around;
-	background: #181818;
-	padding: 0px;
-	margin: 0;
-}
-
-.menu li a {
-	text-decoration: none;
-	color: #f8f8f8;
-	line-height: 2em;
-}
-
-
-
-.basketCount{
-	position: relative;
-	bottom: 10px;
-	left: 5px;
-	color: #ffffff;
-	padding: 3px;
-	border-radius: 5px;
-	font-size: 0.7em;
-}
-
-
-
-.unclickable{
-    pointer-events: none
 }

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function ProductCard({ title, id, cartItems, toggleBasket, price, thumbnail }) {
+export default function ProductCard({ title, id, toggleBasket, price, thumbnail }) {
     return (
         <article className='productCard'>
             <div className="productCard-header">

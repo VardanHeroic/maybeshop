@@ -28,7 +28,7 @@ export default function Catalog(props) {
                 {
                     props.data.map(element => {
                         if(filteredMinPrice < element.price && element.price < filteredMaxPrice && filteredCategories[element.category] ){
-                            return <ProductCard {...element} {...props} key={element.id} />
+                            return <ProductCard {...element} toggleBasket={props.toggleBasket} key={element.id} />
                         }
                     })
                 }

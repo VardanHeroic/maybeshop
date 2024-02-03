@@ -3,8 +3,10 @@ import './css/App.css';
 import Cart from './components/Basket';
 import Catalog from './components/Catalog';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import { Component } from 'react';
 import ProductPage from './components/ProductPage';
+import Loading from './components/Loading';
 
 export default class App extends Component {
     constructor(props) {
@@ -89,7 +91,7 @@ export default class App extends Component {
 
     render() {
         if (this.state.isLoading) {
-            return 'Loading...'
+            return <Loading/>
         }
         return (
             <div className="App">
@@ -133,6 +135,7 @@ export default class App extends Component {
 
                         </Routes>
                     </main>
+                    <Footer/>
                 </Router>
             </div>
         );

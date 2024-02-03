@@ -1,0 +1,22 @@
+footer{
+    background: #fff;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright{
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.footer-github{
+    display: inline-block;
+    background-image: url('../assets/github.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 40px;
+}
